@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\DepartmentsController.cs" />
+    <None Include="Views\Departments\Create.cshtml" />
+    <None Include="Views\Departments\Delete.cshtml" />
+    <None Include="Views\Departments\Details.cshtml" />
+    <None Include="Views\Departments\Edit.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +33,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
   </ItemGroup>
 
 </Project>
