@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 
@@ -11,6 +12,11 @@ namespace SaleWebMVC.Models
 		public string Name { get; set; }
 		public string Email { get; set; }
 		public double BaseSalary { get; set; }
+
+		[Required(ErrorMessage = "{0} required")]
+		[Display(Name = "Birth Date")]
+		[DataType(DataType.Date)]
+		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
 		public DateTime BirthDate { get; set; }
 		public Department Department { get; set; }
 		public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
@@ -19,13 +25,13 @@ namespace SaleWebMVC.Models
 		{
 		}
 
-		public Seller(int id, string name, string email, double baseSalary, DateTime birthDate, Department department)
+		public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
 		{
 			Id = id;
 			Name = name;
 			Email = email;
-			BaseSalary = baseSalary;
 			BirthDate = birthDate;
+			BaseSalary = baseSalary;
 			Department = department;
 		}
 
