@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SaleWebMVC.Data;
+using SaleWebMVC.Services;
 
 namespace SaleWebMVC
 {
@@ -41,6 +42,7 @@ namespace SaleWebMVC
 						builder.MigrationsAssembly("SaleWebMVC")));
 
 			services.AddScoped<SeedingService>(); //Esse comando registra o serviço no injestor de dependência da aplicação
+			services.AddScoped<SellerService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
