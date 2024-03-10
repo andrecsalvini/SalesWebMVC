@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\SalesRecordsController.cs" />
     <Compile Remove="Models\ViewModels\Seller.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\SalesRecord\GroupSearch.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
